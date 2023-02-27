@@ -52,6 +52,13 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap'
 }).addTo(map);
 
+function onLocationError(e) {
+    alert(e.message);
+}
+
+map.on('locationerror', onLocationError);    
+    
+    
 </script>
 
 
